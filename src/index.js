@@ -5,8 +5,3 @@ const print = (str) => console.log(str);
 
 print('start!!!');
 
-const f = () => {
-  print('start!');
-};
-
-f();
