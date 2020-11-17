@@ -1,0 +1,25 @@
+$mobile-width: 480px;
+$tablet-width: 768px;
+$laptop-width: 980px;
+$desktop-width: 1280px;
+$desktop-full: 1600px;
+$desktop-wide: 1920px;
+$wrapper-width: 1200px;
+
+$mobile-width-only: 767px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// Шрифты
+$font-first: 'Montserrat', sans-serif;;
+// $font-roboto: "Roboto", "Arial", sans-serif;
+
+
+// Цвета
+$color-darkShade100: rgba($color: #1f2041, $alpha: 1.0);
+$color-darkShade75: rgba($color: #1f2041, $alpha: 0.75);
+$color-darkShade50: rgba($color: #1f2041, $alpha: 0.50);
+$color-darkShade25: rgba($color: #1f2041, $alpha: 0.25);
+$color-darkShade05: rgba($color: #1f2041, $alpha: 0.05);
+$color-primary: #bc9cff;
+$color-green: #6fcf97;

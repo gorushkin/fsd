@@ -1,0 +1,19 @@
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title #{title}
+  body(class=pageClass)
+    main
+      .wrapper
+        h1 Webpack!!!
+        |
+        |
+        img(src='img/10211953.jpg' alt='')
+
+        block content
+    include ../includes/modules/footer
+

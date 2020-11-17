@@ -14,7 +14,7 @@ module.exports = (env) => {
       compress: true,
       watchContentBase: true,
       // hot: true,
-      port: 8080,
+      port: 8081,
     },
     target: 'web',
     module: {

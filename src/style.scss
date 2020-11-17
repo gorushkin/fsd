@@ -1,0 +1,13 @@
+@import 'normalize.css';
+@import '~material-icons/css/material-icons.scss';
+@import './scss/fonts.scss';
+@import './scss/variables.scss';
+@import './scss/common.scss';
+@import './components/header/header.scss';
+@import './components/header__nav-list/header__nav-list.scss';
+@import './components/header__user-menu/header__user-menu.scss';
+
+
+$material-icons-font-path: '~material-icons/iconfont/';
+
+@import '~material-icons/iconfont/material-icons.scss';

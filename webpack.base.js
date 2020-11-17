@@ -10,8 +10,10 @@ const PATHS = {
   assets: 'assets',
 };
 
-const PAGES_DIR = PATHS.src;
-const PAGES = fs.readdirSync(PAGES_DIR).filter((fileName) => fileName.endsWith('.html'));
+const PAGES_DIR = `${PATHS.src}/`;
+// const PAGES_DIR = `${PATHS.src}/pug/pages/`;
+const PAGES = fs.readdirSync(PAGES_DIR).filter((fileName) => fileName.endsWith('.pug'));
+console.log('PAGES: ', PAGES);
 
 module.exports = {
   externals: {
@@ -31,10 +33,27 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.(pug)$/,
+        loader: 'pug-loader',
+        options: {
+          pretty: true,
+        },
+        exclude: /node_modules/,
+      },
+      {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
+        exclude: /node_modules/,
         options: {
           name: '[name].[ext]',
+        },
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        // exclude: /node_modules/,
+        options: {
+          name: 'fonts/[name].[ext]',
         },
       },
     ],
@@ -46,21 +65,18 @@ module.exports = {
         {
           from: `${PATHS.src}/img`,
           to: 'img',
-          globOptions: {
-            ignore: ['*.DS_Store'],
-          },
+        },
+        {
+          from: `${PATHS.src}/fonts`,
+          to: 'fonts',
         },
       ],
     }),
-    // new HtmlWebpackPlugin({
-    //   template: `${PATHS.src}/index.html`,
-    //   filename: 'index.html',
-    // }),
     ...PAGES.map(
       (page) =>
         new HtmlWebpackPlugin({
           template: `${PAGES_DIR}/${page}`,
-          filename: `./${page}`,
+          filename: `./${page.replace(/\.pug/, '.html')}`,
         })
     ),
   ],

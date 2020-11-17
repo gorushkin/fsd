@@ -1,0 +1,32 @@
+.header {
+  .wrapper {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.header__name-img {
+  width: 53px;
+  height: 12px;
+}
+
+.header__nav-block {
+  display: flex;
+}
+
+.header__user-list {
+  display: flex;
+  align-items: center;
+}

@@ -1,5 +1,4 @@
-import './css/main.css';
-import './scss/style.scss';
+import './style.scss';
 
 const print = (str) => console.log(str);
 

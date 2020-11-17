@@ -1,0 +1,42 @@
+.header__user-list {
+  display: flex;
+  align-items: center;
+}
+
+.header__user-item {
+  padding: 0 10px;
+}
+
+.header__user-link {
+  display: inline-block;
+  border-radius: 22px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+
+  &--light {
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    padding: 7px 19px;
+
+    &:hover {
+      border: 2px solid rgba($color: $color-primary, $alpha: 0.5);
+    }
+  }
+
+  &--purple {
+    padding: 9px 19px;
+    color: #ffffff;
+    background: linear-gradient(180deg, $color-primary 0%, #8ba4f9 100%);
+
+    &:hover {
+      background: linear-gradient(
+        180deg,
+        rgba($color: $color-primary, $alpha: 0.5) 0%,
+        #8ba4f9 100%
+      );
+    }
+  }
+}
