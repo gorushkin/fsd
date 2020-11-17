@@ -3,5 +3,5 @@ import './scss/style.scss';
 
 const print = (str) => console.log(str);
 
-print('start!!!');
+print('start!!');
 

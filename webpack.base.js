@@ -16,8 +16,6 @@ module.exports = {
   entry: [PATHS.src + '/index.js'],
   output: {
     path: PATHS.dist,
-    // filename: '[name].bundle.js',
-    // filename: `${PATHS.assets}/js/[name].js`,
     filename: `js/[name].js`,
     publicPath: '/',
   },
@@ -27,6 +25,13 @@ module.exports = {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
       },
     ],
   },
@@ -44,8 +49,8 @@ module.exports = {
       ],
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.html', // template file
-      filename: 'index.html', // output file
+      template: `${PATHS.src}/index.html`,
+      filename: 'index.html',
     }),
   ],
 };

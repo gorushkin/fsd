@@ -1,6 +1,6 @@
 const { merge } = require('webpack-merge');
-const webpack = require('webpack');
 const base = require('./webpack.base.js');
+const webpack = require('webpack');
 
 module.exports = (env) => {
   console.log('env: ', env);
@@ -12,7 +12,8 @@ module.exports = (env) => {
       contentBase: base.externals.paths.dist,
       historyApiFallback: true,
       compress: true,
-      hot: true,
+      watchContentBase: true,
+      // hot: true,
       port: 8080,
     },
     target: 'web',
