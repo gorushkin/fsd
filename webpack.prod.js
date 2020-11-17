@@ -15,7 +15,6 @@ module.exports = merge(base, {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
-      // filename: `${base.externals.paths.assets}/css/[name].css`,
     }),
   ],
 });
